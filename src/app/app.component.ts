@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -9,8 +9,8 @@ export class AppComponent  {
   // [] means property binding : Component to DOM
   // () means event binding: DOM to Component
 
-  name = 'Angular'; 
-  something ='some';
+  title = 'Angular Playground'
+  name = 'Jo'; 
   color ='blue';
 
   changeColor() {
