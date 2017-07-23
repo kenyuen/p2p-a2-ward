@@ -5,5 +5,12 @@
 </div>
 
 <input id="name" type="text" [(ngModel)]="name" name="name">
-
 <button (click)="changeColor()">Change Color</button>
+
+<br/>
+
+<ul>
+    <li *ngFor="let customer of customers">
+        <app-customer [customer]="customer"></app-customer>
+    </li>
+</ul>
