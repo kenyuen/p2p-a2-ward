@@ -15,12 +15,22 @@ export class CustomersComponent implements OnInit {
     constructor(private _customerService: CustomerService) {  }
 
     ngOnInit() {
-        this._customerService.getCustomers()
+        // Rx observeable version array with rxObservable
+        this._customerService.getCustomers_RxObservable()
+            .subscribe(
+                // worked
+                (customers) => this.customers = customers,
+                // errored
+                (err) => { console.log(err); }
+            );
+
+        // straight up promise to array
+/*         this._customerService.getCustomers()
             .then((customers) => this.customers = customers)
             .catch((err) => {
                 console.log(err);
             });
-
+ */
         // Promise<any>
 /*         this.customers = this._customerService.getCustomers()
             .catch((err) => {
