@@ -1,8 +1,14 @@
 import { Component } from '@angular/core';
 
+// import { CustomerService } from'./customer/customer.service';
+
+// converted to a barrel
+import { CustomerComponent, CustomerService } from './customer/index';
+
 @Component({
   selector: 'my-app',
   templateUrl: 'app/app.component.html',
+  providers:    [CustomerService],  
 })
 export class AppComponent  {
    
