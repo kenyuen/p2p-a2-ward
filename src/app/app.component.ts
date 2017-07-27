@@ -12,14 +12,7 @@ export class AppComponent  {
   title = 'Angular Playground'
   name = 'Stranger'; 
   color ='blue';
-  customers =[
-    {id: 1, name: 'Mickey'},
-    {id: 2, name: 'Minnie'},
-    {id: 3, name: 'Goofy'},
-    {id: 4, name: 'Daffy'},
-    {id: 5, name: 'Donald'},
-  ];
-
+  
   changeColor() {
     this.color = this.color === 'blue' ? 'red' : 'blue';
   }
